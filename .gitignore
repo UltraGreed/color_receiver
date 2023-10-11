@@ -1,0 +1,7 @@
+venv
+.idea
+
+*__pycache__*
+object_recognition/images
+object_recognition/models
+object_recognition/*.png
