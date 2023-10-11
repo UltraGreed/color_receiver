@@ -6,8 +6,6 @@ import cv2
 
 from object_recognition.model_class import HSVModel, get_model_path
 
-import time
-
 COLORS = "red", "green", "blue"
 MODELS = {
     "red": HSVModel(f'object_recognition/{get_model_path("sub", "red")}'),
@@ -43,7 +41,6 @@ for i, color in enumerate(COLORS):
 # Update plots in infinite loop.
 while True:
     result, image = camera.read()
-    cv2.imwrite("test_img1.png", image)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # New message has come.
