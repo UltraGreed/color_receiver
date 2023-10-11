@@ -31,11 +31,14 @@ for i, color in enumerate(COLORS):
     MODELS[color].image = image
     grayscale = MODELS[color].get_grayscale()
 
-    label_widgets[color] = tkinter.Label(root, image=ImageTk.PhotoImage(Image.fromarray(image).resize((360, 360))))
-    label_widgets[f"{color}_gs"] = tkinter.Label(root, image=ImageTk.PhotoImage(Image.fromarray(grayscale).resize((360, 360))))
+    label_widgets[color] = tkinter.Label(
+        root, image=ImageTk.PhotoImage(Image.fromarray(image).resize((360, 360)))
+    )
+    label_widgets[f"{color}_gs"] = tkinter.Label(
+        root, image=ImageTk.PhotoImage(Image.fromarray(grayscale).resize((360, 360)))
+    )
 
     label_widgets[color].grid(row=i, column=0, sticky='nsew')
-    label_widgets[f"{color}_gs"].grid(row=i, column=1, sticky='nsew')
 
 
 # Update plots in infinite loop.
