@@ -52,7 +52,6 @@ class MainWindow(QMainWindow):
             if path:
                 self.model_paths[color] = path
                 self.models[color] = HSVModel(path)
-        print(self.models)
 
     def update_colors(self):
         result, image = self.camera.read()

@@ -8,9 +8,9 @@ from object_recognition.model_class import HSVModel, get_model_path
 
 COLORS = "red", "green", "blue"
 MODELS = {
-    "red": HSVModel(f'object_recognition/{get_model_path("sub", "red")}'),
-    "green": HSVModel(f'object_recognition/{get_model_path("sub", "green")}'),
-    "blue": HSVModel(f'object_recognition/{get_model_path("sub", "blue")}')
+    "red": HSVModel(get_model_path("sub", "red")),
+    "green": HSVModel(get_model_path("sub", "green")),
+    "blue": HSVModel(get_model_path("sub", "blue"))
 }
 
 n_cols = 2
