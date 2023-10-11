@@ -12,7 +12,7 @@ class Client(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        loadUi('client.ui', self)
+        loadUi('client_main.ui', self)
 
         self.showMaximized()
 
